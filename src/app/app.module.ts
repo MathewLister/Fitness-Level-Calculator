@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule,Routes } from '@angular/router'
 import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -50,17 +50,28 @@ import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 
 import { ClientInfoComponent } from './client-info/client-info.component';
+import { ClientReportComponent } from './client-report/client-report.component';
+
+
+const appRoutes:Routes=[
+  {path:'client-info', component:ClientInfoComponent},
+  {path:'client-report', component:ClientReportComponent},
+
+  {path:'', redirectTo:'/client-info', pathMatch:'full'},
+  // {path:'**', component:PageNotFoundComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientInfoComponent
+    ClientInfoComponent,
+    ClientReportComponent
   ],
   imports: [
     BrowserAnimationsModule,
     FormsModule,
     BrowserModule,
-    AppRoutingModule,
+    RouterModule.forRoot(appRoutes,{enableTracing:false}),
     A11yModule,
     ClipboardModule,
     CdkStepperModule,

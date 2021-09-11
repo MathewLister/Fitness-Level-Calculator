@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from '../Models/client';
+import { Router } from '@angular/router' ;
 
 @Component({
   selector: 'client-info',
@@ -11,7 +12,7 @@ export class ClientInfoComponent implements OnInit {
 
   client = new Client();
 
-  constructor() { }
+  constructor(private router : Router, /*private get_data:EmployeeService*/) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +22,7 @@ export class ClientInfoComponent implements OnInit {
     if (this.client.Height && this.client.Weight) {
       alert(this.calculateBMI(this.client.Weight, this.client.Height));
     }
+    this.router.navigateByUrl('/client-report');
   }
 
   public calculateBMI(weight: number, height: number) {
