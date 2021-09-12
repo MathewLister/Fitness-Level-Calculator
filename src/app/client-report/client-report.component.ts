@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ClientReport } from '../Models/clientReport';
+import { FitnessLevelCalculator } from '../Services/FitnessLevelCalculator';
 
 @Component({
   selector: 'app-client-report',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientReportComponent implements OnInit {
 
-  constructor() { }
+  clientReport = new ClientReport();
+  
+  constructor(private fitnessLevelCalculatorService:FitnessLevelCalculator) { }
 
   ngOnInit(): void {
+    //this.clientReport = something?
+    this.clientReport = this.fitnessLevelCalculatorService.getClientReport();
   }
-
 }

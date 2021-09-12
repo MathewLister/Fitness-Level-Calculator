@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from '../Models/client';
-import { Router } from '@angular/router' ;
+import { FitnessLevelCalculator } from '../Services/FitnessLevelCalculator';
 
 @Component({
   selector: 'client-info',
@@ -12,21 +12,14 @@ export class ClientInfoComponent implements OnInit {
 
   client = new Client();
 
-  constructor(private router : Router, /*private get_data:EmployeeService*/) { }
+  constructor(private fitnessLevelCalculatorService:FitnessLevelCalculator) { }
 
   ngOnInit(): void {
   }
 
   public onSubmit() {
     console.log(this.client.Height)
-    if (this.client.Height && this.client.Weight) {
-      alert(this.calculateBMI(this.client.Weight, this.client.Height));
-    }
-    this.router.navigateByUrl('/client-report');
-  }
-
-  public calculateBMI(weight: number, height: number) {
-    return ((weight/Math.pow(height, 2)) * 703).toFixed(2);
+    this.fitnessLevelCalculatorService.generateReport(this.client);
   }
 
 }

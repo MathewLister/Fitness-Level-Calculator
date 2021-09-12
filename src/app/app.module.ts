@@ -52,6 +52,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import { ClientInfoComponent } from './client-info/client-info.component';
 import { ClientReportComponent } from './client-report/client-report.component';
 
+import { FitnessLevelCalculator } from './Services/FitnessLevelCalculator';
 
 const appRoutes:Routes=[
   {path:'client-info', component:ClientInfoComponent},
