@@ -1,11 +1,15 @@
-<mat-form-field appearance="fill">
-    <mat-label>Weight</mat-label>
-    <input matInput [(ngModel)]="client.Weight">
-</mat-form-field>
-<br>
-<mat-form-field appearance="fill">
-    <mat-label>Height</mat-label>
-    <input matInput [(ngModel)]="client.Height">
-</mat-form-field>
-<br>
-<button mat-button (click)="onSubmit()">Submit</button>
+<div class="client-info-container">
+    <mat-card>
+        <mat-form-field appearance="fill">
+            <mat-label>Weight</mat-label>
+            <input matInput [(ngModel)]="client.Weight">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Height</mat-label>
+            <input matInput [(ngModel)]="client.Height">
+        </mat-form-field>
+        <br>
+        <button mat-button color="primary" class="mat-focus-indicator mat-tooltip-trigger mat-raised-button mat-button-base mat-primary" (click)="onSubmit()">Submit</button>
+    </mat-card>
+</div>
