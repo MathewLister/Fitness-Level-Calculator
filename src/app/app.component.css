@@ -4,12 +4,9 @@
   height: 100%;
 }
 
-.top-nav {
+.header-container {
   max-height: 50px;
   grid-row-gap: 10px;
-}
-
-.content-container {
 }
 
 .footer-container {
