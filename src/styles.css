@@ -1,2 +1,10 @@
 @import "~@angular/material/prebuilt-themes/my-theme.css";
 /* @import "~@angular/material/prebuilt-themes/my-theme-dark.css"; */
+
+html,
+body {
+  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
+    Lucida Grande, sans-serif;
+  height: 100%;
+  margin: 0;
+}
