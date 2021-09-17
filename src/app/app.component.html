@@ -1,9 +1,23 @@
 <div class="app-wrapper">
   <div class="header-container">
     <mat-toolbar color="primary">
-      <span>Fitness Level Calculator</span>
+      <div class="logo-container" style="padding-right: 25px">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          style="padding-top: 6px; color: #201f1e; font-size: 36px"
+          >fitness_center</mat-icon
+        >
+      </div>
     </mat-toolbar>
   </div>
+
+  <!-- <div class="sidebar-container">
+    <mat-sidenav-container>
+      <mat-sidenav>Start</mat-sidenav>
+      <mat-sidenav-content>Main</mat-sidenav-content>
+    </mat-sidenav-container>
+  </div> -->
 
   <div class="content-container">
     <router-outlet></router-outlet>
@@ -11,9 +25,7 @@
 
   <div class="footer-container">
     <footer>
-      <div class="btmFooter" flex>
-        <p>Footer</p>
-      </div>
+      <div class="btmFooter" flex></div>
     </footer>
   </div>
 </div>

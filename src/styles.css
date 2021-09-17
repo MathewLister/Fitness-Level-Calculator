@@ -1,4 +1,4 @@
-@import "~@angular/material/prebuilt-themes/my-theme.css";
+@import "/src/my-theme.css";
 /* @import "~@angular/material/prebuilt-themes/my-theme-dark.css"; */
 
 html,
