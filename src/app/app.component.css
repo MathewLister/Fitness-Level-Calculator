@@ -1,0 +1,17 @@
+.app-wrapper {
+  display: grid;
+  grid-template-rows: 90px 1fr 50px;
+  height: 100%;
+}
+
+.header-container {
+  max-height: 50px;
+  grid-row-gap: 10px;
+}
+
+.footer-container {
+  padding-top: 10px;
+  background-color: #201f1e;
+  color: white;
+  text-align: center;
+}

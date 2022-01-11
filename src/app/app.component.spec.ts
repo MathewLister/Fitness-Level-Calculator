@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Fitness-Level-Calculator'`, () => {
+  it(`should have as title 'fitness-level-calculator'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Fitness-Level-Calculator');
+    expect(app.title).toEqual('fitness-level-calculator');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Fitness-Level-Calculator app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('fitness-level-calculator app is running!');
   });
 });

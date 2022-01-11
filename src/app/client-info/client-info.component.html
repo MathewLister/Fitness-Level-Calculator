@@ -1,0 +1,74 @@
+<div class="client-info-container">
+  <mat-card style="margin-bottom: 25px;">
+    <div class="client-info-section">
+      <h1>General Info</h1>
+      <mat-form-field appearance="standard">
+        <mat-label>Weight</mat-label>
+        <input matInput [(ngModel)]="client.Weight" pattern="[0-9]*" />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="standard">
+        <mat-label>Height</mat-label>
+        <input matInput [(ngModel)]="client.Height" pattern="[0-9]*" />
+      </mat-form-field>
+    </div>
+  </mat-card>
+  <mat-card style="margin-bottom: 25px;">
+    <div class="client-info-section">
+      <h1>General Info</h1>
+      <mat-form-field appearance="standard">
+        <mat-label>Weight</mat-label>
+        <input matInput [(ngModel)]="client.Weight" pattern="[0-9]*" />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="standard">
+        <mat-label>Height</mat-label>
+        <input matInput [(ngModel)]="client.Height" pattern="[0-9]*" />
+      </mat-form-field>
+    </div>
+  </mat-card>
+  <mat-card style="margin-bottom: 25px;">
+    <div class="client-info-section">
+      <h1>General Info</h1>
+      <mat-form-field appearance="standard">
+        <mat-label>Weight</mat-label>
+        <input matInput [(ngModel)]="client.Weight" pattern="[0-9]*" />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="standard">
+        <mat-label>Height</mat-label>
+        <input matInput [(ngModel)]="client.Height" pattern="[0-9]*" />
+      </mat-form-field>
+    </div>
+  </mat-card>
+  <mat-card style="margin-bottom: 25px;">
+    <br />
+    <div class="client-info-section">
+      <h1>Workouts</h1>
+      <mat-form-field appearance="standard">
+        <mat-label>Pushups</mat-label>
+        <input matInput [(ngModel)]="client.Weight" />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="standard">
+        <mat-label>Bench Press</mat-label>
+        <input matInput [(ngModel)]="client.Height" />
+      </mat-form-field>
+    </div>
+    <br />
+    <button
+      mat-button
+      color="primary"
+      class="
+        mat-focus-indicator
+        mat-tooltip-trigger
+        mat-raised-button
+        mat-button-base
+        mat-primary
+      "
+      (click)="onSubmit()"
+    >
+      Submit
+    </button>
+  </mat-card>
+</div>
